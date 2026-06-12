@@ -27,25 +27,33 @@ import bodasDeCana from './bodas-de-cana.js'
 import torreDeBabel from './torre-de-babel.js'
 import cacadoresNaNeve from './cacadores-na-neve.js'
 import enterroDoCondeDeOrgaz from './enterro-do-conde-de-orgaz.js'
+import bacoDeCaravaggio from './baco-de-caravaggio.js'
 import vocacaoDeSaoMateus from './vocacao-de-sao-mateus.js'
 import ceiaEmEmaus from './ceia-em-emaus.js'
+import incredulidadeDeSaoTome from './incredulidade-de-sao-tome.js'
 import daviComACabecaDeGolias from './davi-com-a-cabeca-de-golias.js'
 import descidaDaCruzRubens from './descida-da-cruz-rubens.js'
+import velhaFritandoOvos from './velha-fritando-ovos.js'
 import juditeEHolofernes from './judite-e-holofernes.js'
 import licaoDeAnatomia from './licao-de-anatomia.js'
 import tresGracas from './tres-gracas.js'
 import rendicaoDeBreda from './rendicao-de-breda.js'
+import agnusDei from './agnus-dei.js'
 import madalenaDeLaTour from './madalena-de-la-tour.js'
 import rondaNoturna from './ronda-noturna.js'
 import venusDoEspelho from './venus-do-espelho.js'
+import oPintassilgo from './o-pintassilgo.js'
 import lasMeninas from './las-meninas.js'
 import aLeiteira from './a-leiteira.js'
 import vistaDeDelft from './vista-de-delft.js'
 import osSindicos from './os-sindicos.js'
 import mocaComBrincoDePerola from './moca-com-brinco-de-perola.js'
+import autorretratoComDoisCirculos from './autorretrato-com-dois-circulos.js'
 import retornoDoFilhoProdigo from './retorno-do-filho-prodigo.js'
+import oAstronomo from './o-astronomo.js'
 import oGeografo from './o-geografo.js'
 import oBalanco from './o-balanco.js'
+import imaculadaDeTiepolo from './imaculada-de-tiepolo.js'
 import morteDeMarat from './morte-de-marat.js'
 import tresDeMaio from './tres-de-maio.js'
 import grandeOdalisca from './grande-odalisca.js'
@@ -116,25 +124,33 @@ export const obras = [
   torreDeBabel,
   cacadoresNaNeve,
   enterroDoCondeDeOrgaz,
+  bacoDeCaravaggio,
   vocacaoDeSaoMateus,
   ceiaEmEmaus,
+  incredulidadeDeSaoTome,
   daviComACabecaDeGolias,
   descidaDaCruzRubens,
+  velhaFritandoOvos,
   juditeEHolofernes,
   licaoDeAnatomia,
   tresGracas,
   rendicaoDeBreda,
+  agnusDei,
   madalenaDeLaTour,
   rondaNoturna,
   venusDoEspelho,
+  oPintassilgo,
   lasMeninas,
   aLeiteira,
   vistaDeDelft,
   osSindicos,
   mocaComBrincoDePerola,
+  autorretratoComDoisCirculos,
   retornoDoFilhoProdigo,
+  oAstronomo,
   oGeografo,
   oBalanco,
+  imaculadaDeTiepolo,
   morteDeMarat,
   tresDeMaio,
   grandeOdalisca,
