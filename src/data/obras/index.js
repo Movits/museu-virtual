@@ -1,7 +1,10 @@
 import lamentacaoDeGiotto from './lamentacao-de-giotto.js'
 import anunciacaoDeFraAngelico from './anunciacao-de-fra-angelico.js'
+import polipticoDeGante from './poliptico-de-gante.js'
 import casalArnolfini from './casal-arnolfini.js'
+import madonaRolin from './madona-rolin.js'
 import descidaDaCruzVanDerWeyden from './descida-da-cruz-van-der-weyden.js'
+import anunciacaoDeLeonardo from './anunciacao-de-leonardo.js'
 import saoJeronimoNoEscritorio from './sao-jeronimo-no-escritorio.js'
 import cristoMortoMantegna from './cristo-morto-mantegna.js'
 import primavera from './primavera.js'
@@ -10,13 +13,17 @@ import damaComArminho from './dama-com-arminho.js'
 import jardimDasDelicias from './jardim-das-delicias.js'
 import ultimaCeia from './ultima-ceia.js'
 import autorretratoDeDurer from './autorretrato-de-durer.js'
+import aLebre from './a-lebre.js'
 import monaLisa from './mona-lisa.js'
+import aTempestade from './a-tempestade.js'
 import escolaDeAtenas from './escola-de-atenas.js'
 import criacaoDeAdao from './criacao-de-adao.js'
 import madonaSistina from './madona-sistina.js'
+import bacoEAriadne from './baco-e-ariadne.js'
 import osEmbaixadores from './os-embaixadores.js'
 import venusDeUrbino from './venus-de-urbino.js'
 import proverbiosFlamengos from './proverbios-flamengos.js'
+import bodasDeCana from './bodas-de-cana.js'
 import torreDeBabel from './torre-de-babel.js'
 import cacadoresNaNeve from './cacadores-na-neve.js'
 import enterroDoCondeDeOrgaz from './enterro-do-conde-de-orgaz.js'
@@ -82,8 +89,11 @@ export const salas = [
 export const obras = [
   lamentacaoDeGiotto,
   anunciacaoDeFraAngelico,
+  polipticoDeGante,
   casalArnolfini,
+  madonaRolin,
   descidaDaCruzVanDerWeyden,
+  anunciacaoDeLeonardo,
   saoJeronimoNoEscritorio,
   cristoMortoMantegna,
   primavera,
@@ -92,13 +102,17 @@ export const obras = [
   jardimDasDelicias,
   ultimaCeia,
   autorretratoDeDurer,
+  aLebre,
   monaLisa,
+  aTempestade,
   escolaDeAtenas,
   criacaoDeAdao,
   madonaSistina,
+  bacoEAriadne,
   osEmbaixadores,
   venusDeUrbino,
   proverbiosFlamengos,
+  bodasDeCana,
   torreDeBabel,
   cacadoresNaNeve,
   enterroDoCondeDeOrgaz,
