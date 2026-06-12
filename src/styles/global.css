@@ -1,0 +1,159 @@
+:root {
+  --bg: #0e0b07;
+  --bg-raised: #18120a;
+  --bg-panel: rgba(14, 11, 7, 0.96);
+  --gold: #c5a059;
+  --gold-bright: #e8cf95;
+  --gold-dim: #87703f;
+  --ivory: #ece4d4;
+  --ivory-dim: #b8ac92;
+  --crimson: #7a1f2b;
+  --font-display: 'Cinzel', 'Times New Roman', serif;
+  --font-text: 'Cormorant Garamond', Georgia, serif;
+  --ease-museum: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-deep: 0 30px 80px rgba(0, 0, 0, 0.75);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ivory);
+  font-family: var(--font-text);
+  font-size: 19px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold-dim);
+  color: var(--bg);
+}
+
+a {
+  color: var(--gold);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  color: var(--ivory);
+}
+
+/* ---- Atmosfera: grão de filme e vinheta, fixos sobre tudo ---- */
+
+.atmosphere::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 90;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+}
+
+.atmosphere::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 91;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/* ---- Utilitários da estética ---- */
+
+.gold-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  color: var(--gold);
+}
+
+.gold-rule::before,
+.gold-rule::after {
+  content: '';
+  height: 1px;
+  width: clamp(40px, 12vw, 130px);
+  background: linear-gradient(90deg, transparent, var(--gold-dim));
+}
+
+.gold-rule::after {
+  background: linear-gradient(90deg, var(--gold-dim), transparent);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.btn-gold {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  padding: 18px 44px;
+  text-decoration: none;
+  position: relative;
+  transition: color 1s var(--ease-museum), border-color 1s var(--ease-museum),
+    box-shadow 1s var(--ease-museum), background 1s var(--ease-museum);
+}
+
+.btn-gold:hover {
+  color: var(--bg);
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 50px rgba(197, 160, 89, 0.25);
+}
+
+/* Aparição suave ao entrar no viewport (controlada por IntersectionObserver) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1.6s var(--ease-museum), transform 1.6s var(--ease-museum);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

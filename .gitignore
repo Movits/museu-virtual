@@ -1,0 +1,8 @@
+node_modules/
+dist/
+sources/
+check/
+*.log
+.DS_Store
+
+.claude/

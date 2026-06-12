@@ -1,0 +1,412 @@
+.obra-page {
+  position: fixed;
+  inset: 0;
+  background: #060504;
+}
+
+.viewer-wrap,
+.viewer-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.viewer-canvas {
+  opacity: 0;
+  transition: opacity 2s var(--ease-museum);
+}
+
+.viewer-canvas.is-open {
+  opacity: 1;
+}
+
+/* ---- Marcadores de lupa ---- */
+
+.lupa-marker {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-bright);
+  background: rgba(10, 8, 5, 0.55);
+  border: 1px solid var(--gold-dim);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.35);
+  animation: lupa-pulse 4s ease-in-out infinite;
+  transition: transform 0.6s var(--ease-museum), background 0.6s var(--ease-museum),
+    opacity 0.8s var(--ease-museum), color 0.6s var(--ease-museum);
+}
+
+.lupa-marker:hover {
+  transform: scale(1.18);
+  background: rgba(26, 19, 9, 0.85);
+  animation-play-state: paused;
+}
+
+.lupa-marker.is-active {
+  color: var(--bg);
+  background: var(--gold);
+  animation: none;
+}
+
+.lupas-ocultas .lupa-marker {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes lupa-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.35); }
+  50% { box-shadow: 0 0 0 14px rgba(197, 160, 89, 0); }
+}
+
+/* ---- Cartão de entrada ---- */
+
+.obra-cartao {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(ellipse at center, rgba(6, 5, 4, 0.55), rgba(6, 5, 4, 0.92));
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 2.2s var(--ease-museum);
+}
+
+.obra-cartao.is-hidden {
+  opacity: 0;
+}
+
+.obra-cartao h1 {
+  font-size: clamp(30px, 5vw, 56px);
+  letter-spacing: 0.06em;
+  margin: 18px 0 10px;
+}
+
+.obra-cartao-ano {
+  font-style: italic;
+  color: var(--ivory-dim);
+  font-size: 22px;
+}
+
+/* ---- Barra superior ---- */
+
+.obra-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 26px 34px;
+  background: linear-gradient(180deg, rgba(6, 5, 4, 0.85), transparent);
+  pointer-events: none;
+}
+
+.obra-topbar a,
+.obra-topbar .obra-titulo {
+  pointer-events: auto;
+}
+
+.obra-voltar {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  transition: color 0.5s;
+}
+
+.obra-voltar:hover { color: var(--gold-bright); }
+
+.obra-titulo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.obra-titulo-nome {
+  font-family: var(--font-display);
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ivory);
+}
+
+.obra-titulo-artista {
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ivory-dim);
+}
+
+.obra-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.obra-nav a {
+  font-size: 26px;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--ivory-dim);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4px;
+  transition: color 0.5s, border-color 0.5s;
+}
+
+.obra-nav a:hover {
+  color: var(--gold-bright);
+  border-color: var(--gold);
+}
+
+/* ---- Ações e controles ---- */
+
+.obra-acoes {
+  position: absolute;
+  left: 26px;
+  bottom: 24px;
+  z-index: 40;
+  display: flex;
+  gap: 12px;
+}
+
+.obra-acao {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  background: rgba(10, 8, 5, 0.6);
+  border: 1px solid var(--gold-dim);
+  padding: 12px 20px;
+  backdrop-filter: blur(3px);
+  transition: background 0.6s, color 0.6s;
+}
+
+.obra-acao:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.obra-acao.is-off {
+  color: var(--ivory-dim);
+  border-color: rgba(197, 160, 89, 0.3);
+}
+
+.viewer-controls {
+  position: absolute;
+  right: 26px;
+  bottom: 24px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.viewer-controls button {
+  width: 42px;
+  height: 42px;
+  font-size: 19px;
+  font-family: var(--font-text);
+  color: var(--gold-bright);
+  background: rgba(10, 8, 5, 0.6);
+  border: 1px solid var(--gold-dim);
+  backdrop-filter: blur(3px);
+  transition: background 0.5s, color 0.5s;
+}
+
+.viewer-controls button:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+/* ---- Painéis ---- */
+
+.painel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 50;
+  width: min(440px, 36vw);
+  background: var(--bg-panel);
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  visibility: hidden;
+  transition: transform 1s var(--ease-museum), visibility 0s linear 1s;
+}
+
+.painel.is-open {
+  visibility: visible;
+  transform: translateX(0);
+  transition: transform 1s var(--ease-museum);
+}
+
+.painel-sobre {
+  left: 0;
+  border-right: 1px solid rgba(197, 160, 89, 0.3);
+  transform: translateX(-101%);
+}
+
+.painel-lupa {
+  right: 0;
+  border-left: 1px solid rgba(197, 160, 89, 0.3);
+  transform: translateX(101%);
+}
+
+.painel-conteudo {
+  padding: 84px 38px 60px;
+}
+
+.painel-conteudo h2 {
+  font-size: 27px;
+  letter-spacing: 0.04em;
+  margin: 10px 0 18px;
+}
+
+.painel-paragrafo {
+  margin: 0 0 18px;
+  color: var(--ivory);
+  font-size: 18.5px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.painel-paragrafo:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.1em;
+  float: left;
+  line-height: 0.85;
+  padding: 4px 8px 0 0;
+  color: var(--gold);
+}
+
+.painel-fechar {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  font-size: 26px;
+  color: var(--ivory-dim);
+  background: none;
+  border: none;
+  transition: color 0.4s;
+}
+
+.painel-fechar:hover { color: var(--gold-bright); }
+
+.painel-subtitulo {
+  font-size: 16px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 30px 0 14px;
+}
+
+.painel-voltar {
+  margin-top: 10px;
+  padding: 13px 30px;
+  font-size: 12px;
+}
+
+/* placa de museu */
+.placa {
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 18px 20px;
+  margin: 22px 0 26px;
+  background: rgba(197, 160, 89, 0.05);
+}
+
+.placa div {
+  display: flex;
+  gap: 12px;
+  padding: 3px 0;
+}
+
+.placa dt {
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  width: 96px;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.placa dd {
+  font-size: 17px;
+  color: var(--ivory);
+}
+
+.lupa-lista {
+  list-style: none;
+}
+
+.lupa-lista button {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.18);
+  padding: 12px 4px;
+  color: var(--ivory);
+  font-family: var(--font-text);
+  font-size: 18px;
+  transition: color 0.4s, padding-left 0.6s var(--ease-museum);
+}
+
+.lupa-lista button:hover {
+  color: var(--gold-bright);
+  padding-left: 12px;
+}
+
+.lupa-lista-num {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--gold);
+}
+
+/* ---- Mobile: painéis viram folhas inferiores ---- */
+
+@media (max-width: 900px) {
+  .painel {
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 58dvh;
+    border-top: 1px solid rgba(197, 160, 89, 0.35);
+    border-left: none;
+    border-right: none;
+  }
+
+  .painel-sobre,
+  .painel-lupa {
+    transform: translateY(102%);
+  }
+
+  .painel-conteudo {
+    padding: 26px 22px 40px;
+  }
+
+  .obra-titulo-artista { display: none; }
+  .obra-acoes { bottom: 18px; left: 16px; }
+  .viewer-controls { bottom: 18px; right: 16px; flex-direction: row; }
+  .obra-topbar { padding: 14px 16px 28px; }
+}
