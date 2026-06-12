@@ -8,6 +8,9 @@ export default {
   dimensoes: '322 × 340 cm',
   museu: 'Capela Contarelli, Igreja de São Luís dos Franceses, Roma',
   corDominante: '#1c1410',
+  sala: 'barroco',
+  estilo: 'Barroco (tenebrismo)',
+  temas: ['arte sacra', 'luz e sombra', 'conversão', 'evangelho'],
   descricao: [
     'Uma sala escura, uma mesa onde se conta dinheiro, homens vestidos à moda do dia. À direita, dois recém-chegados descalços, e uma mão estendida. O Evangelho de Mateus narra o instante em duas frases (Mateus 9,9): Jesus viu um cobrador de impostos chamado Mateus sentado na coletoria e disse "Segue-me". E ele, levantando-se, o seguiu. Caravaggio pinta exatamente o segundo entre o chamado e a resposta.',
     'Michelangelo Merisi, chamado Caravaggio por causa da cidade de sua família, tinha menos de trinta anos quando recebeu esta encomenda, sua primeira grande obra pública: duas telas laterais para a capela do cardeal francês Mathieu Cointrel (Contarelli, em italiano) na igreja dos franceses em Roma. Foi um escândalo e um triunfo. Da noite para o dia, o pintor brigão e desconhecido tornou-se o artista mais comentado da cidade.',

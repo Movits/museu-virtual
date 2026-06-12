@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, Navigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams, useSearchParams } from 'react-router-dom'
 import { obras, getObra } from '../data/obras/index.js'
 import Viewer from '../components/Viewer.jsx'
 import Ornament from '../components/Ornament.jsx'
@@ -13,10 +13,13 @@ export default function ObraRoute() {
 }
 
 function Obra({ obra }) {
-  const [activeLupaId, setActiveLupaId] = useState(null)
+  // deep-link: #/obra/<slug>?lupa=<id> abre a obra já com a lupa ativa
+  const [searchParams] = useSearchParams()
+  const lupaInicial = obra.lupas.find((l) => l.id === searchParams.get('lupa'))?.id ?? null
+  const [activeLupaId, setActiveLupaId] = useState(lupaInicial)
   const [sobreAberto, setSobreAberto] = useState(false)
   const [lupasVisiveis, setLupasVisiveis] = useState(true)
-  const [cartao, setCartao] = useState(true)
+  const [cartao, setCartao] = useState(!lupaInicial)
 
   const idx = obras.indexOf(obra)
   const anterior = obras[(idx - 1 + obras.length) % obras.length]

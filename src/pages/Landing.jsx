@@ -27,6 +27,10 @@ export default function Landing() {
       <section className="hero">
         <div className="hero-fundo" style={{ backgroundImage: `url(${base}hero/hero-landing.jpg)` }} />
         <div className="hero-veu" />
+        <nav className="hero-nav">
+          <Link to="/galeria">Galeria</Link>
+          <Link to="/academia">Academia</Link>
+        </nav>
         <div className="hero-conteudo">
           <p className="eyebrow hero-aparece">Pinturas em altíssima resolução</p>
           <h1 className="hero-titulo hero-aparece">Museu Virtual</h1>
@@ -75,11 +79,11 @@ export default function Landing() {
 
       <section className="destaques">
         <p className="eyebrow reveal">A coleção</p>
-        <h2 className="reveal">Quase cinco séculos de pintura</h2>
+        <h2 className="reveal">Seis séculos de pintura</h2>
         <div className="reveal"><Ornament /></div>
         <p className="destaques-sub reveal">
-          De Van Eyck a Van Gogh: dez obras-primas, escolhidas pela densidade do
-          que há para descobrir dentro delas.
+          De Giotto a Almeida Júnior: quarenta obras-primas em cinco salas,
+          escolhidas pela densidade do que há para descobrir dentro delas.
         </p>
         <div className="destaques-grid">
           {destaques.map((slug, i) => {

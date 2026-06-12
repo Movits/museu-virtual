@@ -8,6 +8,9 @@ export default {
   dimensoes: '48 × 63 cm',
   museu: 'Musée Marmottan Monet, Paris',
   corDominante: '#6a7587',
+  sala: 'seculo-xix',
+  estilo: 'Impressionismo',
+  temas: ['paisagem', 'marinha', 'porto', 'modernidade', 'amanhecer'],
   descricao: [
     'Uma manhã de bruma no porto de Le Havre, na Normandia. Um sol laranja acaba de subir, dois barcos a remo escurecem a água, e ao fundo mastros, guindastes e chaminés se dissolvem no nevoeiro azulado. Monet pintou a vista da janela do hotel em poucas horas, talvez em uma única sessão, e sem saber estava batizando um movimento inteiro.',
     'Em abril de 1874, um grupo de pintores recusados pelos salões oficiais organizou uma exposição independente no antigo estúdio do fotógrafo Nadar, em Paris: Monet, Renoir, Degas, Pissarro, Sisley, Berthe Morisot. Para o catálogo, Monet precisava de um título e não queria chamar a tela de "vista de Le Havre", pois, como lembrou depois, aquilo não era bem uma vista: "respondi: ponha Impressão".',

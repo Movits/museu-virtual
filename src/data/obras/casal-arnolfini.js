@@ -8,6 +8,9 @@ export default {
   dimensoes: '82,2 × 60 cm',
   museu: 'National Gallery, Londres',
   corDominante: '#2b2418',
+  sala: 'primitivos',
+  estilo: 'Primitivos flamengos',
+  temas: ['retrato', 'simbolismo', 'vida cotidiana', 'casamento', 'espelho'],
   descricao: [
     'Em um quarto de Bruges, um homem e uma mulher de mãos dadas parecem suspensos em um instante solene. O retrato, pintado em 1434, mostra com toda a probabilidade Giovanni di Nicolao Arnolfini, mercador da cidade italiana de Lucca estabelecido em Flandres, ao lado de sua esposa. Cada objeto do quarto foi pintado com uma precisão que, quase seis séculos depois, ainda parece impossível: o latão do lustre, o pelo do cãozinho, a luz que entra pela janela.',
     'Jan van Eyck foi pintor da corte de Filipe, o Bom, duque da Borgonha, e um dos primeiros artistas do norte da Europa a assinar suas obras. Embora não tenha inventado a pintura a óleo, levou a técnica a um refinamento inédito: camadas finíssimas e translúcidas de tinta, as chamadas velaturas, sobrepostas até criar profundidade, brilho e texturas que a têmpera não alcançava. Seu lema pessoal, "Als ich can" (o melhor que posso), resume a ambição silenciosa desse virtuosismo.',

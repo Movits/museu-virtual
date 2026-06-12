@@ -8,6 +8,9 @@ export default {
   dimensoes: '379,5 × 453,5 cm',
   museu: 'Rijksmuseum, Amsterdã',
   corDominante: '#1a140c',
+  sala: 'barroco',
+  estilo: 'Barroco holandês',
+  temas: ['retrato de grupo', 'milícia', 'luz e sombra', 'movimento'],
   descricao: [
     'O título verdadeiro é mais prosaico: "A companhia de milícia do distrito II sob o comando do capitão Frans Banninck Cocq". O apelido "Ronda Noturna" nasceu de um equívoco, quando camadas de verniz escurecido fizeram o século XVIII acreditar que a cena se passava à noite. Limpa, a tela revelou um grupo de guardas cívicos saindo à luz do dia, mas o apelido era bom demais para morrer.',
     'Os retratos coletivos de milícia eram um gênero consagrado na Holanda do século XVII: fileiras comportadas de homens pagantes, cada um com seu rosto bem visível. Rembrandt, no auge da carreira, dinamitou a fórmula. Dezoito milicianos pagaram cerca de cem florins cada um, e receberam em troca não uma fila de retratos, mas uma cena: tambores rufando, mosquetes sendo carregados, um cão que late, uma bandeira erguida, gente que se move e fala ao mesmo tempo.',

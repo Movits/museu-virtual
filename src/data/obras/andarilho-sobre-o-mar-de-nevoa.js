@@ -8,6 +8,9 @@ export default {
   dimensoes: '94,8 × 74,8 cm',
   museu: 'Hamburger Kunsthalle, Hamburgo',
   corDominante: '#5a6675',
+  sala: 'seculo-xix',
+  estilo: 'Romantismo alemão',
+  temas: ['paisagem', 'sublime', 'solidão', 'contemplação'],
   descricao: [
     'Um homem de casaco escuro, em pé sobre um penhasco, contempla um oceano de névoa de onde emergem cristas de rocha e montanhas distantes. Ele está de costas. Não sabemos seu rosto, e é exatamente por isso que conseguimos ocupar seu lugar. Poucas imagens resumem tão bem o Romantismo: o indivíduo só, diante de uma natureza imensa que o excede.',
     'Caspar David Friedrich nasceu em Greifswald, no norte luterano da Alemanha, e fez da paisagem uma forma de oração. Perdeu a mãe na infância e viu o irmão morrer afogado ao salvá-lo de um acidente no gelo, e a melancolia dessa biografia atravessa toda a sua obra. Para ele, a pintura não devia copiar a natureza, mas torná-la visível como linguagem de Deus: "o pintor não deve pintar apenas o que vê diante de si, mas o que vê dentro de si", escreveu.',

@@ -1,0 +1,149 @@
+.busca {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(10, 8, 5, 0.96);
+  backdrop-filter: blur(10px);
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s var(--ease-museum), visibility 0s linear 0.7s;
+}
+
+.busca.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.7s var(--ease-museum);
+}
+
+.busca-fechar {
+  position: fixed;
+  top: 22px;
+  right: 28px;
+  width: 46px;
+  height: 46px;
+  font-size: 30px;
+  color: var(--ivory-dim);
+  background: none;
+  border: none;
+  transition: color 0.4s;
+  z-index: 2;
+}
+
+.busca-fechar:hover { color: var(--gold-bright); }
+
+.busca-conteudo {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 90px 28px 80px;
+  text-align: center;
+}
+
+.busca-input {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  margin: 30px auto 18px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--gold-dim);
+  padding: 10px 6px 16px;
+  font-family: var(--font-text);
+  font-size: clamp(26px, 4vw, 38px);
+  font-style: italic;
+  color: var(--ivory);
+  text-align: center;
+  outline: none;
+  transition: border-color 0.6s;
+}
+
+.busca-input:focus {
+  border-bottom-color: var(--gold-bright);
+}
+
+.busca-input::placeholder {
+  color: var(--ivory-dim);
+  opacity: 0.55;
+}
+
+.busca-dica {
+  font-size: 16px;
+  color: var(--ivory-dim);
+  font-style: italic;
+}
+
+.busca-dica button {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--font-text);
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 7px;
+  padding: 2px 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.4s;
+}
+
+.busca-dica button:hover {
+  border-bottom-color: var(--gold);
+}
+
+.busca-contagem {
+  margin-top: 34px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.busca-resultados {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 38px 28px;
+  margin-top: 36px;
+  text-align: center;
+}
+
+.busca-item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.8s var(--ease-museum);
+}
+
+.busca-item:hover {
+  transform: translateY(-5px);
+}
+
+.busca-item-moldura {
+  background: linear-gradient(135deg, #43331b, #271c0e 45%, #4d3b1f);
+  padding: 8px;
+  border: 1px solid #050403;
+  box-shadow: inset 0 0 0 1px rgba(232, 207, 149, 0.16), 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.busca-item-moldura img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.busca-item-titulo {
+  font-family: var(--font-display);
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  margin-top: 12px;
+}
+
+.busca-item-artista {
+  font-style: italic;
+  font-size: 14.5px;
+  color: var(--ivory-dim);
+  margin-top: 2px;
+}

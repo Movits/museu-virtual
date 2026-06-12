@@ -8,6 +8,9 @@ export default {
   dimensoes: '318 × 276 cm',
   museu: 'Museu do Prado, Madri',
   corDominante: '#241e16',
+  sala: 'barroco',
+  estilo: 'Barroco espanhol',
+  temas: ['retrato', 'corte', 'espelho', 'metapintura'],
   descricao: [
     'Em uma sala alta do Alcázar de Madri, a infanta Margarida, de cinco anos, é servida por suas damas de honra, as meninas do título. Ao redor, anões, uma dama de companhia, um cão sonolento e, atrás de uma tela enorme da qual só vemos o avesso, o próprio Velázquez, pincel na mão, olhando diretamente para nós. No espelho do fundo, dois vultos: o rei Filipe IV e a rainha Mariana. Eles estão exatamente onde nós estamos.',
     'Diego Velázquez passou a vida na corte espanhola, subindo degrau por degrau: pintor do rei aos vinte e poucos anos, depois encarregado dos aposentos reais, função que lhe dava acesso íntimo ao monarca e pouquíssimo tempo para pintar. Las Meninas, feita quatro anos antes de sua morte, é seu testamento artístico: um quadro sobre o próprio ato de pintar, e sobre o lugar do pintor entre os poderosos.',

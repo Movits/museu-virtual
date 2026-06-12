@@ -1,0 +1,228 @@
+.academia-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(197, 160, 89, 0.07), transparent),
+    var(--bg);
+}
+
+.academia-hero {
+  text-align: center;
+  padding: 70px 24px 30px;
+}
+
+.academia-hero h1 {
+  font-size: clamp(34px, 5vw, 56px);
+  letter-spacing: 0.08em;
+  margin: 16px 0 22px;
+}
+
+.academia-hero-texto {
+  max-width: 620px;
+  margin: 26px auto 0;
+  font-size: 21px;
+  font-style: italic;
+  color: var(--ivory-dim);
+}
+
+/* ---- Currículo ---- */
+
+.academia-modulos {
+  max-width: 780px;
+  margin: 70px auto 0;
+  padding: 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.modulo {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  background: rgba(197, 160, 89, 0.04);
+  padding: 30px 34px;
+  transition: border-color 0.8s var(--ease-museum), background 0.8s var(--ease-museum);
+}
+
+.modulo.is-aberto {
+  border-color: var(--gold-dim);
+  background: rgba(197, 160, 89, 0.08);
+}
+
+.modulo:hover {
+  border-color: var(--gold);
+}
+
+.modulo-numero {
+  font-family: var(--font-display);
+  font-size: 34px;
+  color: var(--gold);
+  line-height: 1;
+  min-width: 52px;
+  text-align: center;
+  padding-top: 4px;
+}
+
+.modulo-corpo h2 {
+  font-size: 21px;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.modulo-corpo p {
+  font-size: 18px;
+  color: var(--ivory-dim);
+}
+
+.modulo-botao {
+  margin-top: 18px;
+  padding: 12px 26px;
+  font-size: 12px;
+}
+
+.modulo-breve {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--ivory-dim);
+  border: 1px solid rgba(184, 172, 146, 0.35);
+  padding: 8px 16px;
+}
+
+.academia-aviso {
+  text-align: center;
+  padding: 110px 24px 100px;
+}
+
+.academia-aviso h2 {
+  font-size: clamp(26px, 3.6vw, 38px);
+  letter-spacing: 0.06em;
+  margin: 24px 0 16px;
+}
+
+.academia-aviso p {
+  max-width: 540px;
+  margin: 0 auto 40px;
+  font-size: 19px;
+  font-style: italic;
+  color: var(--ivory-dim);
+}
+
+/* ---- Lição ---- */
+
+.licao {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 28px 60px;
+}
+
+.licao-cabecalho {
+  text-align: center;
+  padding: 30px 0 40px;
+}
+
+.licao-cabecalho h1 {
+  font-size: clamp(32px, 4.6vw, 52px);
+  letter-spacing: 0.07em;
+  margin: 16px 0 22px;
+}
+
+.licao-tempo {
+  margin-top: 22px;
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ivory-dim);
+}
+
+.licao-texto h2 {
+  font-size: clamp(23px, 3vw, 30px);
+  letter-spacing: 0.06em;
+  margin: 54px 0 18px;
+}
+
+.licao-texto p {
+  font-size: 19.5px;
+  margin-bottom: 20px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.licao-texto > p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.2em;
+  float: left;
+  line-height: 0.85;
+  padding: 5px 10px 0 0;
+  color: var(--gold);
+}
+
+.exercicio {
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  background: rgba(197, 160, 89, 0.06);
+  padding: 26px 30px;
+  margin: 30px 0 38px;
+}
+
+.exercicio h3 {
+  font-size: 19px;
+  letter-spacing: 0.06em;
+  margin: 8px 0 10px;
+}
+
+.exercicio p {
+  font-size: 18px;
+  color: var(--ivory);
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.exercicio-link {
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.5);
+  padding-bottom: 3px;
+  transition: color 0.5s, border-color 0.5s;
+}
+
+.exercicio-link:hover {
+  color: var(--ivory);
+  border-color: var(--ivory);
+}
+
+.licao-rodape {
+  text-align: center;
+  padding: 50px 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 34px;
+}
+
+.licao-rodape-nota {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ivory-dim);
+}
+
+.licao-rodape-nota a {
+  color: var(--gold);
+}
+
+@media (max-width: 620px) {
+  .modulo {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+  }
+  .licao-texto p {
+    text-align: left;
+  }
+}

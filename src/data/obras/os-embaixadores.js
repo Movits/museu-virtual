@@ -8,6 +8,9 @@ export default {
   dimensoes: '207 × 209,5 cm',
   museu: 'National Gallery, Londres',
   corDominante: '#1d2a24',
+  sala: 'renascimento',
+  estilo: 'Renascimento nórdico',
+  temas: ['retrato', 'simbolismo', 'morte', 'ciência', 'anamorfose'],
   descricao: [
     'Dois homens jovens, ricos e poderosos posam de pé, em tamanho natural, diante de uma cortina verde. À esquerda, Jean de Dinteville, de 29 anos, embaixador da França na corte de Henrique VIII da Inglaterra. À direita, seu amigo Georges de Selve, de 25, bispo de Lavaur. Entre eles, uma estante de dois andares exibe instrumentos científicos, livros, um globo terrestre e um alaúde: o inventário do saber humano em 1533.',
     'Hans Holbein, nascido em Augsburgo, na Alemanha, tornou-se o grande retratista da corte inglesa em um dos momentos mais tensos da história do país: Henrique VIII rompia com Roma para casar-se com Ana Bolena, e a cristandade se partia ao meio com a Reforma. O quadro foi pintado exatamente nesse ano de ruptura, e cada objeto da estante fala, em código, dessa crise.',

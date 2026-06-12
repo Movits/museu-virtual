@@ -8,6 +8,9 @@ export default {
   dimensoes: '44,5 × 39 cm',
   museu: 'Mauritshuis, Haia',
   corDominante: '#10131a',
+  sala: 'barroco',
+  estilo: 'Barroco holandês',
+  temas: ['retrato', 'tronie', 'luz', 'mistério'],
   descricao: [
     'Uma jovem se volta sobre o ombro, os lábios entreabertos, como se tivéssemos acabado de chamá-la pelo nome. Não há cenário, não há mesa, não há janela: apenas um fundo escuro e um rosto que a luz encontra. É talvez o retrato mais hipnótico da pintura ocidental, e tecnicamente não é um retrato.',
     'Os holandeses do século XVII chamavam este gênero de tronie: um estudo de cabeça, de expressão e de figurino, sem compromisso com a identidade de um modelo. O turbante exótico e a pérola enorme são adereços de fantasia. Por isso ninguém sabe, nem jamais saberá com certeza, quem foi a moça: as candidatas vão de Maria, filha mais velha do pintor, a uma criada da casa, hipótese que inspirou o romance de Tracy Chevalier (1999) e o filme com Scarlett Johansson.',

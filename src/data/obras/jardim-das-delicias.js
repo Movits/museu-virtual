@@ -8,6 +8,9 @@ export default {
   dimensoes: '205,5 × 384,9 cm (aberto)',
   museu: 'Museu do Prado, Madri',
   corDominante: '#29402e',
+  sala: 'renascimento',
+  estilo: 'Renascimento nórdico',
+  temas: ['arte sacra', 'simbolismo', 'fantástico', 'tríptico', 'paraíso', 'inferno'],
   descricao: [
     'Nenhuma pintura do mundo guarda tantos mundos dentro de si. Lido da esquerda para a direita, o tríptico narra um arco completo: o paraíso, onde Deus apresenta Eva a Adão; um imenso jardim de prazeres onde a humanidade nua se entrega aos sentidos; e o inferno, escuro e gelado, onde os mesmos prazeres se tornam instrumentos de tortura. Fechadas, as portas externas mostram, em tons de cinza, o mundo no terceiro dia da criação, uma esfera translúcida flutuando no escuro.',
     'Sobre Hieronymus Bosch, nascido Jheronimus van Aken na cidade de ’s-Hertogenbosch, no atual sul dos Países Baixos, sabemos pouco. Era um pintor próspero e respeitado, membro de uma confraria religiosa local, a Irmandade de Nossa Senhora. Nada na sua biografia documentada explica de onde vieram as criaturas que povoam seus painéis: híbridos de pássaro e homem, frutas gigantes, máquinas impossíveis.',

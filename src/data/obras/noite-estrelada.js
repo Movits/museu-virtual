@@ -8,6 +8,9 @@ export default {
   dimensoes: '73,7 × 92,1 cm',
   museu: 'Museum of Modern Art (MoMA), Nova York',
   corDominante: '#2a3a5e',
+  sala: 'seculo-xix',
+  estilo: 'Pós-impressionismo',
+  temas: ['paisagem', 'noite', 'céu', 'expressão'],
   descricao: [
     'Em junho de 1889, Vincent van Gogh estava internado por vontade própria no asilo de Saint-Paul-de-Mausole, um antigo mosteiro em Saint-Rémy-de-Provence, no sul da França. Meses antes, em Arles, havia mutilado a própria orelha na crise que encerrou o sonho da casa amarela compartilhada com Gauguin. Do quarto, através das grades da janela, ele via o nascer do dia sobre os Alpilles. Foi dessa janela, e da memória, que saiu a noite mais famosa da história da pintura.',
     'Em carta ao irmão Theo, no início de junho de 1889, ele escreveu: "esta manhã vi o campo da minha janela muito antes do nascer do sol, com nada além da estrela da manhã, que parecia muito grande". A tela, porém, não é um registro: Van Gogh compôs a cena no ateliê, somando a Vênus real um céu em turbilhão, uma lua exagerada, um cipreste em primeiro plano e uma aldeia cujo campanário esguio lembra mais a Holanda da sua infância do que a Provença.',

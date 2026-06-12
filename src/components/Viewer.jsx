@@ -39,11 +39,16 @@ export default function Viewer({ obra, activeLupaId, onSelectLupa, lupasVisiveis
   selectRef.current = onSelectLupa
   const panelFractionRef = useRef(panelFraction)
   panelFractionRef.current = panelFraction
+  const activeLupaRef = useRef(activeLupaId)
+  activeLupaRef.current = activeLupaId
 
   useEffect(() => {
+    // tiles podem morar no repo principal ou em um repo de acervo satélite
+    const tilesBase = obra.tilesBase ?? `${import.meta.env.BASE_URL}tiles/`
     const viewer = OpenSeadragon({
       element: elRef.current,
-      tileSources: `${import.meta.env.BASE_URL}tiles/${obra.slug}/${obra.slug}.dzi`,
+      tileSources: `${tilesBase}${obra.slug}/${obra.slug}.dzi`,
+      crossOriginPolicy: 'Anonymous',
       showNavigationControl: false,
       animationTime: 2.2,
       springStiffness: 4.5,
@@ -77,6 +82,12 @@ export default function Viewer({ obra, activeLupaId, onSelectLupa, lupasVisiveis
           checkResize: false,
         })
       })
+
+      // deep-link: se a página abriu com uma lupa ativa, mergulha nela
+      const pendente = obra.lupas.find((l) => l.id === activeLupaRef.current)
+      if (pendente) {
+        viewer.viewport.fitBounds(paddedRect(lupaViewportRect(viewer, pendente), panelFractionRef.current))
+      }
     })
 
     return () => {

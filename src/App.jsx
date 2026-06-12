@@ -3,6 +3,8 @@ import { useEffect } from 'react'
 import Landing from './pages/Landing.jsx'
 import Galeria from './pages/Galeria.jsx'
 import Obra from './pages/Obra.jsx'
+import Academia from './pages/Academia.jsx'
+import LicaoComoLer from './pages/LicaoComoLer.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -21,6 +23,8 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/obra/:slug" element={<Obra />} />
+          <Route path="/academia" element={<Academia />} />
+          <Route path="/academia/como-ler-um-quadro" element={<LicaoComoLer />} />
         </Routes>
       </div>
     </HashRouter>
