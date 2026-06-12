@@ -110,17 +110,59 @@ function normalizar(texto) {
     .toLowerCase()
 }
 
-// Busca por título, artista, estilo, temas, museu, ano e sala, sem
-// diferenciar acentos nem maiúsculas. Todos os termos precisam aparecer.
+// Corpus de busca por obra, computado uma única vez: além dos metadados,
+// inclui a descrição inteira e os textos das lupas, para que buscas como
+// "Cristo" ou "Deus" encontrem tudo o que as análises mencionam.
+const corpusCache = new Map()
+function corpus(obra) {
+  let c = corpusCache.get(obra.slug)
+  if (!c) {
+    const sala = salas.find((s) => s.id === obra.sala)
+    c = {
+      forte: normalizar([obra.titulo, obra.artista].join(' ')),
+      medio: normalizar([obra.estilo ?? '', ...(obra.temas ?? []), sala?.nome ?? ''].join(' ')),
+      texto: normalizar(
+        [
+          obra.museu,
+          obra.ano,
+          ...obra.descricao,
+          ...obra.lupas.flatMap((l) => [l.titulo, ...l.texto]),
+        ].join(' ')
+      ),
+    }
+    corpusCache.set(obra.slug, c)
+  }
+  return c
+}
+
+// Busca em texto completo, sem diferenciar acentos nem maiúsculas.
+// Todos os termos precisam aparecer em algum lugar da obra; o resultado é
+// ranqueado: título/artista pesam mais que temas/estilo, que pesam mais que
+// menções no corpo do texto.
 export function buscarObras(consulta) {
   const q = normalizar(consulta.trim())
   if (q.length < 2) return []
   const termos = q.split(/\s+/)
-  return obras.filter((obra) => {
-    const sala = salas.find((s) => s.id === obra.sala)
-    const texto = normalizar(
-      [obra.titulo, obra.artista, obra.estilo ?? '', obra.museu, obra.ano, sala?.nome ?? '', ...(obra.temas ?? [])].join(' ')
-    )
-    return termos.every((t) => texto.includes(t))
-  })
+  const pontuadas = []
+  for (const obra of obras) {
+    const c = corpus(obra)
+    let pontos = 0
+    let valida = true
+    for (const t of termos) {
+      if (c.forte.includes(t)) {
+        pontos += 3
+      } else if (c.medio.includes(t)) {
+        pontos += 2
+      } else if (c.texto.includes(t)) {
+        // quanto mais o texto da obra fala do termo, mais alto ela sobe
+        const ocorrencias = c.texto.split(t).length - 1
+        pontos += 1 + Math.min(ocorrencias - 1, 8) * 0.25
+      } else {
+        valida = false
+        break
+      }
+    }
+    if (valida) pontuadas.push({ obra, pontos })
+  }
+  return pontuadas.sort((a, b) => b.pontos - a.pontos).map((p) => p.obra)
 }

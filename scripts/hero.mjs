@@ -24,6 +24,6 @@ async function crop(slug, region, width, dest) {
 
 // herói: o céu da Noite Estrelada (redemoinho, lua e Vênus)
 await crop('noite-estrelada', { x: 0.16, y: 0.02, w: 0.82, h: 0.66 }, 2600, out('hero-landing.jpg'))
-// seção das lupas: o espelho convexo do Casal Arnolfini, com respiro ao redor
-// para o hover ter para onde mergulhar
-await crop('casal-arnolfini', { x: 0.345, y: 0.20, w: 0.31, h: 0.24 }, 1400, out('detalhe-espelho.jpg'))
+// seção das lupas: o quarto do Casal Arnolfini bem aberto, com o espelho
+// pequeno no centro: o hover mergulha de uma pintura para dentro de outra
+await crop('casal-arnolfini', { x: 0.24, y: 0.08, w: 0.52, h: 0.42 }, 1600, out('detalhe-espelho.jpg'))
