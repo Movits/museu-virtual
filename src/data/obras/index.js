@@ -81,6 +81,7 @@ import maraba from './maraba.js'
 import ilhaDosMortos from './ilha-dos-mortos.js'
 import comedoresDeBatatas from './comedores-de-batatas.js'
 import tardeNaGrandeJatte from './tarde-na-grande-jatte.js'
+import arrufos from './arrufos.js'
 import independenciaOuMorte from './independencia-ou-morte.js'
 import girassois from './girassois.js'
 import terracoDoCafeANoite from './terraco-do-cafe-a-noite.js'
@@ -90,6 +91,9 @@ import jogadoresDeCartas from './jogadores-de-cartas.js'
 import caipiraPicandoFumo from './caipira-picando-fumo.js'
 import oGrito from './o-grito.js'
 import oBanho from './o-banho.js'
+import tiradentesEsquartejado from './tiradentes-esquartejado.js'
+import partidaDaMoncao from './partida-da-moncao.js'
+import gioventu from './gioventu.js'
 import saudade from './saudade.js'
 import oVioleiro from './o-violeiro.js'
 import oBeijo from './o-beijo.js'
@@ -189,6 +193,7 @@ export const obras = [
   ilhaDosMortos,
   comedoresDeBatatas,
   tardeNaGrandeJatte,
+  arrufos,
   independenciaOuMorte,
   girassois,
   terracoDoCafeANoite,
@@ -198,6 +203,9 @@ export const obras = [
   caipiraPicandoFumo,
   oGrito,
   oBanho,
+  tiradentesEsquartejado,
+  partidaDaMoncao,
+  gioventu,
   saudade,
   oVioleiro,
   oBeijo,

@@ -1,6 +1,6 @@
 # Museu Virtual
 
-Uma galeria para ver de perto. Setenta obras-primas em domínio público (rumo a cem), em altíssima resolução, com lupas que mergulham nos detalhes e contam a história, os símbolos e a técnica de cada pintura. Inclui busca em texto completo por tema/artista/estilo, salas por período, e a Academia, com a primeira lição gratuita de leitura de quadros.
+Uma galeria para ver de perto. Cem obras-primas em domínio público, em altíssima resolução, com lupas que mergulham nos detalhes e contam a história, os símbolos e a técnica de cada pintura. Inclui busca em texto completo por tema/artista/estilo, salas por período, e a Academia, com a primeira lição gratuita de leitura de quadros.
 
 **No ar em: https://movits.github.io/museu-virtual/**
 
@@ -9,11 +9,11 @@ Uma galeria para ver de perto. Setenta obras-primas em domínio público (rumo a
 - As imagens vêm dos melhores scans em domínio público do Wikimedia Commons (Google Art Project e digitalizações oficiais dos museus).
 - Cada obra é servida como uma pirâmide Deep Zoom (DZI) e exibida com [OpenSeadragon](https://openseadragon.github.io/), o mesmo tipo de visualizador usado por museus reais.
 - As lupas são regiões anotadas da imagem: ao clicar, o viewport anima até o detalhe e um painel apresenta a análise. Deep-link: `#/obra/<slug>?lupa=<id>`.
-- Os tiles das 10 obras originais vivem neste repo (`public/tiles/`); as demais são servidas por repositórios de acervo satélites ([acervo-1](https://github.com/Movits/museu-virtual-acervo-1), [acervo-2](https://github.com/Movits/museu-virtual-acervo-2)), cada um abaixo do limite de 1 GB do GitHub Pages, referenciados pelo campo `tilesBase` da obra.
+- Os tiles das 10 obras originais vivem neste repo (`public/tiles/`); as demais são servidas por repositórios de acervo satélites ([acervo-1](https://github.com/Movits/museu-virtual-acervo-1), [acervo-2](https://github.com/Movits/museu-virtual-acervo-2), [acervo-3](https://github.com/Movits/museu-virtual-acervo-3)), cada um abaixo do limite de 1 GB do GitHub Pages, referenciados pelo campo `tilesBase` da obra.
 
 ## A coleção
 
-Setenta obras de Giotto (c. 1305) a Klimt (1908), organizadas em cinco salas: Primitivos e Primeiro Renascimento, Renascimento, Barroco e o Século de Ouro, Do Romantismo ao Moderno, e Brasil. A lista completa está em `src/data/obras/index.js`.
+Cem obras de Giotto (c. 1305) aos Nenúfares tardios de Monet (c. 1916-1919), organizadas em cinco salas: Primitivos e Primeiro Renascimento, Renascimento, Barroco e o Século de Ouro, Do Romantismo ao Moderno, e Brasil. A lista completa está em `src/data/obras/index.js`.
 
 ## Desenvolvimento
 
