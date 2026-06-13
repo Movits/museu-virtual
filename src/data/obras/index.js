@@ -55,6 +55,7 @@ import oGeografo from './o-geografo.js'
 import oBalanco from './o-balanco.js'
 import imaculadaDeTiepolo from './imaculada-de-tiepolo.js'
 import morteDeMarat from './morte-de-marat.js'
+import majaVestida from './maja-vestida.js'
 import tresDeMaio from './tres-de-maio.js'
 import grandeOdalisca from './grande-odalisca.js'
 import andarilhoSobreOMarDeNevoa from './andarilho-sobre-o-mar-de-nevoa.js'
@@ -62,27 +63,37 @@ import balsaDaMedusa from './balsa-da-medusa.js'
 import carroDeFeno from './carro-de-feno.js'
 import saturno from './saturno.js'
 import liberdadeGuiandoOPovo from './liberdade-guiando-o-povo.js'
+import aGrandeOnda from './a-grande-onda.js'
 import temerario from './temerario.js'
+import chuvaVaporEVelocidade from './chuva-vapor-e-velocidade.js'
+import ofelia from './ofelia.js'
 import oAngelus from './o-angelus.js'
 import primeiraMissaNoBrasil from './primeira-missa-no-brasil.js'
 import olympia from './olympia.js'
+import maeDeWhistler from './mae-de-whistler.js'
 import impressaoNascerDoSol from './impressao-nascer-do-sol.js'
 import classeDeDanca from './classe-de-danca.js'
+import mulherComSombrinha from './mulher-com-sombrinha.js'
 import baileNoMoulinDeLaGalette from './baile-no-moulin-de-la-galette.js'
 import parisDiaDeChuva from './paris-dia-de-chuva.js'
 import barNoFoliesBergere from './bar-no-folies-bergere.js'
 import maraba from './maraba.js'
+import ilhaDosMortos from './ilha-dos-mortos.js'
+import comedoresDeBatatas from './comedores-de-batatas.js'
 import tardeNaGrandeJatte from './tarde-na-grande-jatte.js'
 import independenciaOuMorte from './independencia-ou-morte.js'
 import girassois from './girassois.js'
+import terracoDoCafeANoite from './terraco-do-cafe-a-noite.js'
 import noiteEstrelada from './noite-estrelada.js'
 import oQuartoEmArles from './o-quarto-em-arles.js'
 import jogadoresDeCartas from './jogadores-de-cartas.js'
 import caipiraPicandoFumo from './caipira-picando-fumo.js'
 import oGrito from './o-grito.js'
+import oBanho from './o-banho.js'
 import saudade from './saudade.js'
 import oVioleiro from './o-violeiro.js'
 import oBeijo from './o-beijo.js'
+import nenufaresAzuis from './nenufares-azuis.js'
 
 // As salas do museu, em ordem de visita
 export const salas = [
@@ -152,6 +163,7 @@ export const obras = [
   oBalanco,
   imaculadaDeTiepolo,
   morteDeMarat,
+  majaVestida,
   tresDeMaio,
   grandeOdalisca,
   andarilhoSobreOMarDeNevoa,
@@ -159,27 +171,37 @@ export const obras = [
   carroDeFeno,
   saturno,
   liberdadeGuiandoOPovo,
+  aGrandeOnda,
   temerario,
+  chuvaVaporEVelocidade,
+  ofelia,
   oAngelus,
   primeiraMissaNoBrasil,
   olympia,
+  maeDeWhistler,
   impressaoNascerDoSol,
   classeDeDanca,
+  mulherComSombrinha,
   baileNoMoulinDeLaGalette,
   parisDiaDeChuva,
   barNoFoliesBergere,
   maraba,
+  ilhaDosMortos,
+  comedoresDeBatatas,
   tardeNaGrandeJatte,
   independenciaOuMorte,
   girassois,
+  terracoDoCafeANoite,
   noiteEstrelada,
   oQuartoEmArles,
   jogadoresDeCartas,
   caipiraPicandoFumo,
   oGrito,
+  oBanho,
   saudade,
   oVioleiro,
   oBeijo,
+  nenufaresAzuis,
 ]
 
 export function getObra(slug) {
